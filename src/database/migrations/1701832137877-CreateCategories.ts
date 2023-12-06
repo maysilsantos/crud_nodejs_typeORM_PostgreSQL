@@ -3,12 +3,11 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
-import { createConnection, ConnectionOptions } from "typeorm";
 
 export class CreateCategories1701832137877 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        
+
         await queryRunner.createTable(
           new Table({
             name: "categories",
