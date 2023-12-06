@@ -1,3 +1,4 @@
+import "reflect-metadata" //lib que permite a utilizacao de notations em uma aplicacao
 import express from "express"
 
 const app = express();
