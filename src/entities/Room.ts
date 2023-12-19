@@ -11,6 +11,11 @@ export class Room {
    })
    name: string
 
+   @Column({
+      type: "text"
+   })
+   description: string
+
    @OneToMany(() => Video, (video) => video.room )
    videos: Video[]
 
