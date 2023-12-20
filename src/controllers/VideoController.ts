@@ -6,13 +6,13 @@ import { videoRepository } from "../repositories/VideoRepository"
 export class VideoController {
    async create( req: Request, res: Response) {
 
-      const { title, url, room } = req.body
-      const { idAula } = req.params
+      const { title, url } = req.body
+      const { idRoom } = req.params
 
 
       try{
 
-         const newVideo = videoRepository.create({title, url, room})
+         const newVideo = videoRepository.create({title, url})
 
          await videoRepository.save(newVideo)
 
