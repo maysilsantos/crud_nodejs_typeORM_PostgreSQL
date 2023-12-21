@@ -9,11 +9,11 @@ AppDataSource.initialize().then(() => {
    app.use(express.json())
 
    // app.get('/', (req, res) => {
-   //    return res.json("Everything is fine! Keep going!")
+   //     return res.json("Everything is fine! Keep going!")
    // })
 
    app.use(routes)
-   
+   console.log("Server is up and running!")
    return app.listen(process.env.PORT)
 
 })
